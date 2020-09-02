@@ -1,0 +1,26 @@
+@import "../../styles/constants.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  width: max-content;
+  height: max-content;
+  cursor: pointer;
+  font: $text;
+  vertical-align: middle;
+}
+
+.primary {
+  background: $blue;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.secondary {
+  background: $yellow;
+  color: #ffffff;
+  border-radius: 12px;
+}
+

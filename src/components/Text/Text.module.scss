@@ -1,0 +1,11 @@
+@import "../../styles/constants.scss";
+
+.title {
+  font: $text;
+  color: $dark-grey;
+}
+
+.placeholder {
+  font: $text;
+  color: $placeholder-grey;
+}
