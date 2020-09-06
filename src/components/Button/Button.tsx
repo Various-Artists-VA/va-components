@@ -4,28 +4,30 @@ import classNames from "classnames";
 import styles from "./Button.module.scss";
 
 export enum ButtonType {
-  "primary",
-  "secondary",
-  "text",
+  primary = "primary",
+  secondary = "secondary",
+  text = "text",
+}
+
+export enum ButtonSize {
+  large = "large",
+  medium = "medium",
+  small = "small",
 }
 
 export interface ButtonProps {
   type: ButtonType;
+  size: ButtonSize;
   children: ReactNode;
 }
 
-export const Button: React.FC<ButtonProps> = ({ type, children }) => (
-  <div
-    className={classNames(styles.container, {
-      [styles.primary]: type === ButtonType.primary,
-      [styles.secondary]: type === ButtonType.secondary,
-    })}
-  >
+export const Button: React.FC<ButtonProps> = ({ type, children, size }) => (
+  <div className={classNames(styles.container, styles[size], styles[type])}>
     {children}
   </div>
 );
 
 Button.defaultProps = {
-  type: ButtonType.primary,
-  children: <>test</>,
+  type: "primary",
+  size: "large",
 };

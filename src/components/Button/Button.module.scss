@@ -4,23 +4,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 16px;
   width: max-content;
   height: max-content;
   cursor: pointer;
-  font: $text;
-  vertical-align: middle;
+  border-radius: 12px;
 }
 
 .primary {
   background: $blue;
   color: #ffffff;
-  border-radius: 12px;
 }
 
 .secondary {
   background: $yellow;
   color: #ffffff;
-  border-radius: 12px;
 }
 
+.large {
+  padding: 8px 16px;
+  font: $large-title;
+}
+
+.medium {
+  padding: 7px 12px;
+  font: $medium-title;
+  border-radius: 10px;
+}
+
+.small {
+  padding: 5px 10px;
+  font: $small-title;
+  border-radius: 8px;
+}

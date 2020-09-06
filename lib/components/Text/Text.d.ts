@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
-export declare const Title: React.FC<{
+export interface TextProps {
     children: ReactNode;
-}>;
-export declare const Placeholder: React.FC<{
-    children: ReactNode;
-}>;
+    className?: string;
+}
+export declare const Title: React.FC<TextProps & React.HTMLProps<HTMLDivElement>>;
+export declare const Placeholder: React.FC<TextProps & React.HTMLProps<HTMLDivElement>>;
 //# sourceMappingURL=Text.d.ts.map

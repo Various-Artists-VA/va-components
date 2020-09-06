@@ -1,18 +1,82 @@
 @import "../../styles/constants.scss";
 
 .container {
-  height: 64px;
-  padding: 0 1em;
   display: flex;
   align-items: center;
   background: $light_grey;
   border-radius: 12px;
   border: none;
-  font: $text;
-  color: $dark-grey;
-  outline: none;
+  box-sizing: border-box;
+  width: 512px;
+}
+
+.container.focused {
+  border: solid 4px $grey;
 }
 
 .container::placeholder {
   color: $placeholder-grey;
+}
+
+.icon {
+  margin-right: 8px;
+  flex-shrink: 0;
+  stroke: $grey;
+}
+
+.clear {
+  margin-left: 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.input {
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+}
+
+.large {
+  height: 48px;
+  padding: 10px 16px;
+
+  input {
+    color: $dark-grey;
+    font: $large-text;
+  }
+}
+
+.large.focused {
+  padding: 10px 12px;
+}
+
+.default {
+  height: 40px;
+  padding: 11px 12px;
+  border-radius: 10px;
+
+  input {
+    color: $dark-grey;
+    font: $medium-text;
+  }
+}
+
+.default.focused {
+  padding: 11px 8px;
+}
+
+.small {
+  height: 32px;
+  padding: 8px 9px;
+  border-radius: 8px;
+
+  input {
+    color: $dark-grey;
+    font: $small-text;
+  }
+}
+
+.small.focused {
+  padding: 8px 5px;
 }
