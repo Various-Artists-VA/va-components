@@ -1,11 +1,11 @@
 {
   "name": "va-components",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "types": "lib",
   "scripts": {
-    "build": "webpack",
+    "build": "rm -rf lib && rm -rf dist && tsc -p . && webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
