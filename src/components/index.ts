@@ -1,5 +1,5 @@
-import { Button } from "./Button";
-import { BottomBar } from "./BottomBar";
+import Button from "./Button";
+import BottomBar from "./BottomBar";
 import Input from "./Input";
 import * as Typography from "./Text";
 
