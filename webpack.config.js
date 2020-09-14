@@ -7,7 +7,7 @@ module.exports = {
           filename: 'index.js',
           path: path.resolve(__dirname, 'dist'),
           library: 'vs-components',
-          library: 'commonjs',
+          libraryTarget: 'commonjs',
       },
       resolve: {
           // Add `.ts` and `.tsx` as a resolvable extension.
