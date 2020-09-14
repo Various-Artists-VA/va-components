@@ -9,25 +9,31 @@ export enum ButtonType {
   text = "text",
 }
 
-export enum ButtonSize {
+export enum ButtonVariant {
   large = "large",
   medium = "medium",
   small = "small",
 }
 
-export interface ButtonProps {
-  type: ButtonType;
-  size: ButtonSize;
+export interface ButtonProps extends React.HTMLProps<HTMLDivElement> {
+  type?: ButtonType | string;
+  variant?: ButtonVariant | string;
   children: ReactNode;
 }
 
-export const Button: React.FC<ButtonProps> = ({ type, children, size }) => (
-  <div className={classNames(styles.container, styles[size], styles[type])}>
+export const Button: React.FC<ButtonProps> = ({
+  type = "primary",
+  variant = "medium",
+  children,
+}) => (
+  <div className={classNames(styles.container, styles[variant], styles[type])}>
     {children}
   </div>
 );
 
 Button.defaultProps = {
   type: "primary",
-  size: "large",
-};
+  variant: "medium",
+} as Partial<ButtonProps>;
+
+export default Button;

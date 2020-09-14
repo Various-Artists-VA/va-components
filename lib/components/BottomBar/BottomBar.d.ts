@@ -8,4 +8,5 @@ export interface BottomBarProps {
     className?: string;
 }
 export declare const BottomBar: React.FC<BottomBarProps>;
+export default BottomBar;
 //# sourceMappingURL=BottomBar.d.ts.map

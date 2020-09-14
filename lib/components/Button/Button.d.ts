@@ -4,15 +4,16 @@ export declare enum ButtonType {
     secondary = "secondary",
     text = "text"
 }
-export declare enum ButtonSize {
+export declare enum ButtonVariant {
     large = "large",
     medium = "medium",
     small = "small"
 }
-export interface ButtonProps {
-    type: ButtonType;
-    size: ButtonSize;
+export interface ButtonProps extends React.HTMLProps<HTMLDivElement> {
+    type?: ButtonType | string;
+    variant?: ButtonVariant | string;
     children: ReactNode;
 }
 export declare const Button: React.FC<ButtonProps>;
+export default Button;
 //# sourceMappingURL=Button.d.ts.map

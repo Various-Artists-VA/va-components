@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 
 import styles from "./BottomBar.module.scss";
-import { Title } from "../Text";
+import Button from "../Button/Button";
 
 export interface BottomBarProps {
   onBack?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
@@ -19,11 +19,19 @@ export const BottomBar: React.FC<BottomBarProps> = ({
   className,
 }) => (
   <div className={classNames(styles.container, className)}>
-    {onBack ? <Title onClick={onBack}>Back</Title> : null}
+    {onBack ? (
+      <Button type="text" onClick={onBack}>
+        Back
+      </Button>
+    ) : null}
     <div className={styles.actions}>
       {actions?.map((action) => (
-        <Title onClick={action.onClick}>{action.name}</Title>
+        <Button type="text" onClick={action.onClick}>
+          {action.name}
+        </Button>
       ))}
     </div>
   </div>
 );
+
+export default BottomBar;

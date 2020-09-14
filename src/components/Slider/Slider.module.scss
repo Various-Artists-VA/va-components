@@ -1,0 +1,41 @@
+@import "../../styles/constants.scss";
+
+.container {
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.container::-moz-range-thumb {
+  width: 10px;
+  height: 40px;
+  border: solid $grey 4px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.container::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 40px;
+  border: solid $grey 4px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background: $white;
+  box-shadow: -100% 0 0 100% $grey;
+}
+
+.container::-moz-range-progress
+  .container::-ms-fill-lower
+  .container:focus::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  background: $grey;
+  height: 4px;
+}
+
+.container::-moz-range-track .container::-ms-fill-upper {
+  height: 4px;
+  background: $light-grey;
+}

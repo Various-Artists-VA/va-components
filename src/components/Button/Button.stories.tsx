@@ -1,14 +1,14 @@
 import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 
-import { Button, ButtonProps, ButtonSize, ButtonType } from "./Button";
+import { Button, ButtonProps, ButtonVariant } from "./Button";
 
 export default {
   title: "Design System/Button",
   component: Button,
 } as Meta;
 
-const LargeTemplate: React.SFC<ButtonProps> = (args) => <Button {...args} />;
+const LargeTemplate: React.FC<ButtonProps> = (args) => <Button variant={ButtonVariant.large} {...args} />;
 
 export const LargePrimary = LargeTemplate.bind({});
 LargePrimary.args = {
@@ -27,8 +27,8 @@ LargeTextButton.args = {
   children: "Text Button",
 };
 
-const MediumTemplate: React.SFC<ButtonProps> = (args) => (
-  <Button {...args} size={ButtonSize.medium} />
+const MediumTemplate: React.FC<ButtonProps> = (args) => (
+  <Button {...args} />
 );
 
 export const MediumPrimary = MediumTemplate.bind({});
@@ -48,8 +48,8 @@ MediumTextButton.args = {
   children: "Text Button",
 };
 
-const SmallTemplate: React.SFC<ButtonProps> = (args) => (
-  <Button {...args} size={ButtonSize.small} />
+const SmallTemplate: React.FC<ButtonProps> = (args) => (
+  <Button {...args} variant={ButtonVariant.small} />
 );
 
 export const SmallPrimary = SmallTemplate.bind({});

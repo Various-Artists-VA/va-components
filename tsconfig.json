@@ -67,5 +67,5 @@
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
   },
   "include": ["src"],
-  "exclude": ["src/**/*.stories.*", "node_modules"]
+  "exclude": ["src/**/*.stories.*", "src/components/Slider", "node_modules"]
 }
