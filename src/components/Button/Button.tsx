@@ -25,8 +25,12 @@ export const Button: React.FC<ButtonProps> = ({
   type = "primary",
   variant = "medium",
   children,
+  onClick,
 }) => (
-  <div className={classNames(styles.container, styles[variant], styles[type])}>
+  <div
+    className={classNames(styles.container, styles[variant], styles[type])}
+    onClick={onClick}
+  >
     {children}
   </div>
 );
