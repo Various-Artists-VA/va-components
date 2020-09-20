@@ -12,20 +12,20 @@ const Template: React.SFC<BottomBarProps> = (args) => <BottomBar {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {
-  actions: [{ name: "About", onClick: () => {} }],
+  actions: [{ name: "About", onClick: () => true }],
 };
 
 export const BasicWithBack = Template.bind({});
 BasicWithBack.args = {
-  actions: [{ name: "About", onClick: () => {} }],
-  onBack: () => {},
+  actions: [{ name: "About", onClick: () => true }],
+  onBack: () => true,
 };
 
 export const BasicWithMoreActions = Template.bind({});
 BasicWithMoreActions.args = {
   actions: [
-    { name: "About", onClick: () => {} },
-    { name: "Legal", onClick: () => {} },
+    { name: "About", onClick: () => true },
+    { name: "Legal", onClick: () => true },
   ],
-  onBack: () => {},
+  onBack: () => true,
 };
