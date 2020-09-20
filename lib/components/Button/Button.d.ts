@@ -10,9 +10,10 @@ export declare enum ButtonVariant {
     small = "small"
 }
 export interface ButtonProps extends React.HTMLProps<HTMLDivElement> {
+    children: ReactNode;
     type?: ButtonType | string;
     variant?: ButtonVariant | string;
-    children: ReactNode;
+    className?: string;
 }
 export declare const Button: React.FC<ButtonProps>;
 export default Button;
