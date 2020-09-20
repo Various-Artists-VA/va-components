@@ -15,8 +15,8 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".css", ".scss"],
   },
   externals: {
-    react: "commonjs react",
-    "react-dom": "commonjs react-dom",
+    react: "umd react",
+    "react-dom": "umd react-dom",
   },
   module: {
     rules: [
