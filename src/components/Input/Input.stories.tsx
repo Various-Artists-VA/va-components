@@ -61,6 +61,30 @@ const smallWithSearchIconArgs = {
 };
 SmallWithSearchIcon.args = smallWithSearchIconArgs;
 
+export const WithTitle = Template.bind({});
+const withTitleArgs = {
+  placeholder: "placeholder",
+  variant: "large",
+  title: "With Title:",
+};
+WithTitle.args = withTitleArgs;
+
+export const MediumWithTitle = Template.bind({});
+const mediumWithTitleArgs = {
+  placeholder: "placeholder",
+  variant: InputVariant.medium,
+  title: "With Title:",
+};
+MediumWithTitle.args = mediumWithTitleArgs;
+
+export const SmallWithTitle = Template.bind({});
+const smallWithTitleArgs = {
+  placeholder: "placeholder",
+  variant: "small",
+  title: "With Title:",
+};
+SmallWithTitle.args = smallWithTitleArgs;
+
 export const InputGroup: React.SFC = () => (
   <>
     <Large {...largeArgs} style={{ margin: "1em" }} />
@@ -91,6 +115,21 @@ export const InputGroup: React.SFC = () => (
       {...smallWithSearchIconArgs}
       initialValue="initialValue"
       isClearable
+      style={{ margin: "1em" }}
+    />
+    <WithTitle
+      {...withTitleArgs}
+      initialValue="initialValue"
+      style={{ margin: "1em" }}
+    />
+    <MediumWithTitle
+      {...mediumWithTitleArgs}
+      initialValue="initialValue"
+      style={{ margin: "1em" }}
+    />
+    <SmallWithTitle
+      {...smallWithTitleArgs}
+      initialValue="initialValue"
       style={{ margin: "1em" }}
     />
   </>

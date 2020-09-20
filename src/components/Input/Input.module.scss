@@ -1,5 +1,25 @@
 @import "../../styles/constants.scss";
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.title.large {
+  font: $large-text;
+  margin-bottom: 16px;
+}
+
+.title.default {
+  font: $medium-text;
+  margin-bottom: 8px;
+}
+
+.title.small {
+  font: $small-text;
+  margin-bottom: 4px;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -37,7 +57,7 @@
   width: 100%;
 }
 
-.large {
+.container.large {
   height: 48px;
   padding: 10px 16px;
 
@@ -47,11 +67,11 @@
   }
 }
 
-.large.focused {
+.container.large.focused {
   padding: 10px 12px;
 }
 
-.default {
+.container.default {
   height: 40px;
   padding: 11px 12px;
   border-radius: 10px;
@@ -62,11 +82,11 @@
   }
 }
 
-.default.focused {
+.container.default.focused {
   padding: 11px 8px;
 }
 
-.small {
+.container.small {
   height: 32px;
   padding: 8px 9px;
   border-radius: 8px;
@@ -77,6 +97,6 @@
   }
 }
 
-.small.focused {
+.container.small.focused {
   padding: 8px 5px;
 }

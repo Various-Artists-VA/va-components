@@ -17,6 +17,8 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   placeholder?: string;
   classNamePrefix?: string;
   isClearable?: boolean;
+  title?: string;
+  name?: string;
   icon?: string;
   style?: CSSProperties;
   onChange?: (event: React.FormEvent<HTMLInputElement>) => void;
@@ -29,6 +31,8 @@ export const TextInput: React.FC<TextInputProps> = ({
   placeholder,
   variant,
   icon,
+  title,
+  name,
   isClearable,
   onChange,
   onFocus,
@@ -71,50 +75,55 @@ export const TextInput: React.FC<TextInputProps> = ({
   }
 
   return (
-    <div
-      className={classNames(
-        styles.container,
-        styles[variant],
-        classNamePrefix + "--container",
-        {
-          [styles.focused]: focused,
-        }
-      )}
-      style={style}
-    >
-      {icon ? (
-        <Icon
-          {...iconOptions}
-          className={classNames(styles.icon, classNamePrefix + "--icon")}
-        />
+    <div className={classNames(styles.wrapper, styles[variant])} style={style}>
+      {title ? (
+        <div className={classNames(styles.title, styles[variant])}>{title}</div>
       ) : null}
-      <input
-        type="text"
-        value={currentValue}
-        placeholder={placeholder}
-        className={classNames(styles.input, classNamePrefix + "--input")}
-        onChange={(e) => {
-          setCurrentValue(e.target.value);
-          if (onChange) onChange(e);
-        }}
-        onFocus={(e) => {
-          setFocused(true);
-          if (onFocus) onFocus(e);
-        }}
-        onBlur={(e) => {
-          setFocused(false);
-          if (onBlur) onBlur(e);
-        }}
-        {...rest}
-      />
-      {isClearable && currentValue && currentValue !== "" && (
-        <Clear
-          className={classNames(styles.clear, classNamePrefix + "--clear")}
-          viewBox="0 0 24 24"
-          onClick={clear}
-          {...clearOptions}
+      <div
+        className={classNames(
+          styles.container,
+          styles[variant],
+          classNamePrefix + "--container",
+          {
+            [styles.focused]: focused,
+          }
+        )}
+      >
+        {icon ? (
+          <Icon
+            {...iconOptions}
+            className={classNames(styles.icon, classNamePrefix + "--icon")}
+          />
+        ) : null}
+        <input
+          type="text"
+          name={name}
+          value={currentValue}
+          placeholder={placeholder}
+          className={classNames(styles.input, classNamePrefix + "--input")}
+          onChange={(e) => {
+            setCurrentValue(e.target.value);
+            if (onChange) onChange(e);
+          }}
+          onFocus={(e) => {
+            setFocused(true);
+            if (onFocus) onFocus(e);
+          }}
+          onBlur={(e) => {
+            setFocused(false);
+            if (onBlur) onBlur(e);
+          }}
+          {...rest}
         />
-      )}
+        {isClearable && currentValue && currentValue !== "" && (
+          <Clear
+            className={classNames(styles.clear, classNamePrefix + "--clear")}
+            viewBox="0 0 24 24"
+            onClick={clear}
+            {...clearOptions}
+          />
+        )}
+      </div>
     </div>
   );
 };
