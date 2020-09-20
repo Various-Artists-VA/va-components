@@ -61,29 +61,29 @@ const smallWithSearchIconArgs = {
 };
 SmallWithSearchIcon.args = smallWithSearchIconArgs;
 
-export const WithTitle = Template.bind({});
-const withTitleArgs = {
+export const WithLabel = Template.bind({});
+const withLabelArgs = {
   placeholder: "placeholder",
   variant: "large",
-  title: "With Title:",
+  label: "With Label:",
 };
-WithTitle.args = withTitleArgs;
+WithLabel.args = withLabelArgs;
 
-export const MediumWithTitle = Template.bind({});
-const mediumWithTitleArgs = {
+export const MediumWithLabel = Template.bind({});
+const mediumWithLabelArgs = {
   placeholder: "placeholder",
   variant: InputVariant.medium,
-  title: "With Title:",
+  label: "With Label:",
 };
-MediumWithTitle.args = mediumWithTitleArgs;
+MediumWithLabel.args = mediumWithLabelArgs;
 
-export const SmallWithTitle = Template.bind({});
-const smallWithTitleArgs = {
+export const SmallWithLabel = Template.bind({});
+const smallWithLabelArgs = {
   placeholder: "placeholder",
   variant: "small",
-  title: "With Title:",
+  label: "With Label:",
 };
-SmallWithTitle.args = smallWithTitleArgs;
+SmallWithLabel.args = smallWithLabelArgs;
 
 export const InputGroup: React.SFC = () => (
   <>
@@ -117,18 +117,18 @@ export const InputGroup: React.SFC = () => (
       isClearable
       style={{ margin: "1em" }}
     />
-    <WithTitle
-      {...withTitleArgs}
+    <WithLabel
+      {...withLabelArgs}
       initialValue="initialValue"
       style={{ margin: "1em" }}
     />
-    <MediumWithTitle
-      {...mediumWithTitleArgs}
+    <MediumWithLabel
+      {...mediumWithLabelArgs}
       initialValue="initialValue"
       style={{ margin: "1em" }}
     />
-    <SmallWithTitle
-      {...smallWithTitleArgs}
+    <SmallWithLabel
+      {...smallWithLabelArgs}
       initialValue="initialValue"
       style={{ margin: "1em" }}
     />

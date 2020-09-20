@@ -17,7 +17,7 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   placeholder?: string;
   classNamePrefix?: string;
   isClearable?: boolean;
-  title?: string;
+  label?: string;
   name?: string;
   icon?: string;
   style?: CSSProperties;
@@ -31,7 +31,7 @@ export const TextInput: React.FC<TextInputProps> = ({
   placeholder,
   variant,
   icon,
-  title,
+  label,
   name,
   isClearable,
   onChange,
@@ -72,12 +72,12 @@ export const TextInput: React.FC<TextInputProps> = ({
       clearOptions.height = 16;
       clearOptions.width = 16;
       break;
-  }
+  } 
 
   return (
     <div className={classNames(styles.wrapper, styles[variant])} style={style}>
-      {title ? (
-        <div className={classNames(styles.title, styles[variant])}>{title}</div>
+      {label ? (
+        <div className={classNames(styles.label, styles[variant])}>{label}</div>
       ) : null}
       <div
         className={classNames(

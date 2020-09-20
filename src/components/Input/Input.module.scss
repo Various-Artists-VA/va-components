@@ -5,17 +5,17 @@
   flex-direction: column;
 }
 
-.title.large {
+.label.large {
   font: $large-text;
   margin-bottom: 16px;
 }
 
-.title.default {
+.label.default {
   font: $medium-text;
   margin-bottom: 8px;
 }
 
-.title.small {
+.label.small {
   font: $small-text;
   margin-bottom: 4px;
 }

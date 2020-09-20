@@ -10,7 +10,7 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
     placeholder?: string;
     classNamePrefix?: string;
     isClearable?: boolean;
-    title?: string;
+    label?: string;
     name?: string;
     icon?: string;
     style?: CSSProperties;
