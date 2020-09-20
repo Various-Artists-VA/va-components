@@ -14,6 +14,10 @@ module.exports = {
     // Add `.ts` and `.tsx` as a resolvable extension.
     extensions: [".ts", ".tsx", ".js", ".css", ".scss"],
   },
+  externals: {
+    react: "commonjs react",
+    "react-dom": "commonjs react-dom",
+  },
   module: {
     rules: [
       {
