@@ -18,7 +18,7 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   classNamePrefix?: string;
   isClearable?: boolean;
   icon?: string;
-  style: CSSProperties;
+  style?: CSSProperties;
   onChange?: (event: React.FormEvent<HTMLInputElement>) => void;
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
@@ -121,7 +121,7 @@ export const TextInput: React.FC<TextInputProps> = ({
 
 TextInput.defaultProps = {
   variant: InputVariant.medium,
-  classNamePrefix: "text-input"
+  classNamePrefix: "text-input",
 };
 
 export default TextInput;
