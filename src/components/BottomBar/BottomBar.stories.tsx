@@ -23,6 +23,9 @@ BasicWithBack.args = {
 
 export const BasicWithMoreActions = Template.bind({});
 BasicWithMoreActions.args = {
-  actions: [{ name: "About", onClick: () => {} }, { name: "Legal", onClick: () => {} }],
+  actions: [
+    { name: "About", onClick: () => {} },
+    { name: "Legal", onClick: () => {} },
+  ],
   onBack: () => {},
 };

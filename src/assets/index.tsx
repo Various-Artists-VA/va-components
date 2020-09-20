@@ -1,1 +1,1 @@
-export { default as Clear } from './Clear'
+export { default as Clear } from "./Clear";

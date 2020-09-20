@@ -1,3 +1,3 @@
-import Input from "./Input";
+import * as Input from "./Input";
 export default Input;
 //# sourceMappingURL=index.d.ts.map

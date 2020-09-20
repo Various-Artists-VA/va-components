@@ -8,7 +8,9 @@ export default {
   component: Button,
 } as Meta;
 
-const LargeTemplate: React.FC<ButtonProps> = (args) => <Button variant={ButtonVariant.large} {...args} />;
+const LargeTemplate: React.FC<ButtonProps> = (args) => (
+  <Button variant={ButtonVariant.large} {...args} />
+);
 
 export const LargePrimary = LargeTemplate.bind({});
 LargePrimary.args = {
@@ -27,9 +29,7 @@ LargeTextButton.args = {
   children: "Text Button",
 };
 
-const MediumTemplate: React.FC<ButtonProps> = (args) => (
-  <Button {...args} />
-);
+const MediumTemplate: React.FC<ButtonProps> = (args) => <Button {...args} />;
 
 export const MediumPrimary = MediumTemplate.bind({});
 MediumPrimary.args = {

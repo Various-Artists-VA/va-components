@@ -18,11 +18,9 @@ export const Title: React.FC<TextProps & React.HTMLProps<HTMLDivElement>> = ({
   </div>
 );
 
-export const Placeholder: React.FC<TextProps & React.HTMLProps<HTMLDivElement>> = ({
-  children,
-  className,
-  ...rest
-}) => (
+export const Placeholder: React.FC<
+  TextProps & React.HTMLProps<HTMLDivElement>
+> = ({ children, className, ...rest }) => (
   <div className={classNames(styles.placeholder, className)} {...rest}>
     {children}
   </div>
