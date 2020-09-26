@@ -2,8 +2,8 @@ import React, { useState, CSSProperties, SVGAttributes } from "react";
 import classNames from "classnames";
 import { Icon, Props } from "react-feather";
 
-import Clear from "../../assets/Clear";
-import styles from "./Input.module.scss";
+import Clear from "../../../assets/Clear";
+import styles from "./TextInput.module.scss";
 
 export enum InputVariant {
   large = "large",

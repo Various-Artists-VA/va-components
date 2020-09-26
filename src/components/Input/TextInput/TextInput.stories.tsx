@@ -5,7 +5,7 @@ import {
   TextInput as TextInputComponent,
   TextInputProps,
   InputVariant,
-} from "./Input";
+} from "./TextInput";
 
 export default {
   title: "Design System/Input",
@@ -16,118 +16,121 @@ const Template: React.SFC<TextInputProps> = (args) => (
   <TextInputComponent {...args} />
 );
 
-export const Large = Template.bind({});
+export const LargeTextInput = Template.bind({});
 const largeArgs = {
   placeholder: "placeholder",
   variant: "large",
 };
-Large.args = largeArgs;
+LargeTextInput.args = largeArgs;
 
-export const Medium = Template.bind({});
+export const MediumTextInput = Template.bind({});
 const mediumArgs = {
   placeholder: "placeholder",
   variant: InputVariant.medium,
 };
-Medium.args = mediumArgs;
+MediumTextInput.args = mediumArgs;
 
-export const Small = Template.bind({});
+export const SmallTextInput = Template.bind({});
 const smallArgs = {
   placeholder: "placeholder",
   variant: "small",
 };
-Small.args = smallArgs;
+SmallTextInput.args = smallArgs;
 
-export const WithSearchIcon = Template.bind({});
+export const TextInputWithSearchIcon = Template.bind({});
 const withSearchIconArgs = {
   placeholder: "placeholder",
   variant: "large",
   icon: "search",
 };
-WithSearchIcon.args = withSearchIconArgs;
+TextInputWithSearchIcon.args = withSearchIconArgs;
 
-export const MediumWithSearchIcon = Template.bind({});
+export const MediumTextInputWithSearchIcon = Template.bind({});
 const mediumWithSearchIconArgs = {
   placeholder: "placeholder",
   variant: InputVariant.medium,
   icon: "search",
 };
-MediumWithSearchIcon.args = mediumWithSearchIconArgs;
+MediumTextInputWithSearchIcon.args = mediumWithSearchIconArgs;
 
-export const SmallWithSearchIcon = Template.bind({});
+export const SmallTextInputWithSearchIcon = Template.bind({});
 const smallWithSearchIconArgs = {
   placeholder: "placeholder",
   variant: "small",
   icon: "search",
 };
-SmallWithSearchIcon.args = smallWithSearchIconArgs;
+SmallTextInputWithSearchIcon.args = smallWithSearchIconArgs;
 
-export const WithLabel = Template.bind({});
+export const TextInputWithLabel = Template.bind({});
 const withLabelArgs = {
   placeholder: "placeholder",
   variant: "large",
   label: "With Label:",
 };
-WithLabel.args = withLabelArgs;
+TextInputWithLabel.args = withLabelArgs;
 
-export const MediumWithLabel = Template.bind({});
+export const MediumTextInputWithLabel = Template.bind({});
 const mediumWithLabelArgs = {
   placeholder: "placeholder",
   variant: InputVariant.medium,
   label: "With Label:",
 };
-MediumWithLabel.args = mediumWithLabelArgs;
+MediumTextInputWithLabel.args = mediumWithLabelArgs;
 
-export const SmallWithLabel = Template.bind({});
+export const SmallTextInputWithLabel = Template.bind({});
 const smallWithLabelArgs = {
   placeholder: "placeholder",
   variant: "small",
   label: "With Label:",
 };
-SmallWithLabel.args = smallWithLabelArgs;
+SmallTextInputWithLabel.args = smallWithLabelArgs;
 
 export const InputGroup: React.SFC = () => (
   <>
-    <Large {...largeArgs} style={{ margin: "1em" }} />
-    <Medium {...mediumArgs} style={{ margin: "1em" }} />
-    <Small {...smallArgs} style={{ margin: "1em" }} />
-    <WithSearchIcon {...withSearchIconArgs} style={{ margin: "1em" }} />
-    <MediumWithSearchIcon
+    <LargeTextInput {...largeArgs} style={{ margin: "1em" }} />
+    <MediumTextInput {...mediumArgs} style={{ margin: "1em" }} />
+    <SmallTextInput {...smallArgs} style={{ margin: "1em" }} />
+    <TextInputWithSearchIcon
+      {...withSearchIconArgs}
+      style={{ margin: "1em" }}
+    />
+    <MediumTextInputWithSearchIcon
       {...mediumWithSearchIconArgs}
       style={{ margin: "1em" }}
     />
-    <SmallWithSearchIcon
+    <SmallTextInputWithSearchIcon
       {...smallWithSearchIconArgs}
       style={{ margin: "1em" }}
     />
-    <WithSearchIcon
+    <TextInputWithSearchIcon
       {...withSearchIconArgs}
       initialValue="initialValue"
       isClearable
       style={{ margin: "1em" }}
     />
-    <MediumWithSearchIcon
+    <MediumTextInputWithSearchIcon
       {...mediumWithSearchIconArgs}
       initialValue="initialValue"
       isClearable
       style={{ margin: "1em" }}
     />
-    <SmallWithSearchIcon
+    <SmallTextInputWithSearchIcon
       {...smallWithSearchIconArgs}
       initialValue="initialValue"
       isClearable
       style={{ margin: "1em" }}
     />
-    <WithLabel
+    <TextInputWithLabel
       {...withLabelArgs}
       initialValue="initialValue"
       style={{ margin: "1em" }}
     />
-    <MediumWithLabel
+    <MediumTextInputWithLabel
       {...mediumWithLabelArgs}
       initialValue="initialValue"
       style={{ margin: "1em" }}
     />
-    <SmallWithLabel
+    <SmallTextInputWithLabel
       {...smallWithLabelArgs}
       initialValue="initialValue"
       style={{ margin: "1em" }}
