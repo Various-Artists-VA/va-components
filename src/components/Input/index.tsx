@@ -1,3 +1,4 @@
-import * as TextInput from "./TextInput";
+import * as Text from "./TextInput";
+import * as File from "./FileInput";
 
-export default TextInput;
+export default { ...Text, ...File };

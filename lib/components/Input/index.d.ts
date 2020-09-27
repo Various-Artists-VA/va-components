@@ -1,3 +1,5 @@
-import * as TextInput from "./TextInput";
-export default TextInput;
+declare const _default: {
+    default: typeof import("./FileInput/FileInput");
+};
+export default _default;
 //# sourceMappingURL=index.d.ts.map
