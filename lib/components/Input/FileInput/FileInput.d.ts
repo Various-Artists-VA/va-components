@@ -12,7 +12,7 @@ export interface FileInputProps extends React.HTMLProps<HTMLInputElement> {
     className?: string;
     isClearable?: boolean;
     name?: string;
-    emptyMessage?: string;
+    placeholder?: string;
     accept?: string;
     label?: string;
     style?: CSSProperties;

@@ -5,19 +5,21 @@
   flex-direction: column;
 }
 
-.label.large {
-  font: $large-text;
-  margin-bottom: 16px;
-}
+.label {
+  &.large {
+    font: $large-text;
+    margin-bottom: 16px;
+  }
 
-.label.default {
-  font: $medium-text;
-  margin-bottom: 8px;
-}
+  &.default {
+    font: $medium-text;
+    margin-bottom: 8px;
+  }
 
-.label.small {
-  font: $small-text;
-  margin-bottom: 4px;
+  &.small {
+    font: $small-text;
+    margin-bottom: 4px;
+  }
 }
 
 .container {
@@ -28,14 +30,69 @@
   border: none;
   box-sizing: border-box;
   width: 512px;
-}
 
-.container.focused {
-  border: solid 4px $grey;
-}
+  &.invalid {
+    border: solid 4px $red;
+  }
 
-.container::placeholder {
-  color: $placeholder-grey;
+  &.focused {
+    border: solid 4px $grey;
+  }
+
+  &.focused.invalid {
+    border-color: $red;
+  }
+
+  &::placeholder {
+    color: $placeholder-grey;
+  }
+
+  &.large {
+    height: 48px;
+    padding: 10px 16px;
+
+    input {
+      color: $dark-grey;
+      font: $large-text;
+    }
+  }
+
+  &.large.focused,
+  &.large.invalid {
+    padding: 10px 12px;
+  }
+
+  &.default {
+    height: 40px;
+    padding: 11px 12px;
+    border-radius: 10px;
+
+    input {
+      color: $dark-grey;
+      font: $medium-text;
+    }
+  }
+
+  &.default.focused,
+  &.default.invalid {
+    padding: 11px 8px;
+  }
+
+  &.small {
+    height: 32px;
+    padding: 8px 9px;
+    border-radius: 8px;
+
+    input {
+      color: $dark-grey;
+      font: $small-text;
+    }
+  }
+
+  &.small.focused,
+  &.small.invalid {
+    padding: 8px 5px;
+  }
 }
 
 .icon {
@@ -55,48 +112,16 @@
   background: none;
   outline: none;
   width: 100%;
-}
 
-.container.large {
-  height: 48px;
-  padding: 10px 16px;
-
-  input {
-    color: $dark-grey;
-    font: $large-text;
+  &:invalid {
+    outline: none;
+    border: none;
+    box-shadow: none;
   }
 }
 
-.container.large.focused {
-  padding: 10px 12px;
-}
-
-.container.default {
-  height: 40px;
-  padding: 11px 12px;
-  border-radius: 10px;
-
-  input {
-    color: $dark-grey;
-    font: $medium-text;
-  }
-}
-
-.container.default.focused {
-  padding: 11px 8px;
-}
-
-.container.small {
-  height: 32px;
-  padding: 8px 9px;
-  border-radius: 8px;
-
-  input {
-    color: $dark-grey;
-    font: $small-text;
-  }
-}
-
-.container.small.focused {
-  padding: 8px 5px;
+.validationMessage {
+  padding: 4px;
+  font: $small-text;
+  color: $red;
 }

@@ -18,7 +18,7 @@ export interface FileInputProps extends React.HTMLProps<HTMLInputElement> {
   className?: string;
   isClearable?: boolean;
   name?: string;
-  emptyMessage?: string;
+  placeholder?: string;
   accept?: string;
   label?: string;
   style?: CSSProperties;
@@ -35,10 +35,10 @@ export interface FileInputProps extends React.HTMLProps<HTMLInputElement> {
 export const FileInput: React.FC<FileInputProps> = ({
   variant,
   name,
-  emptyMessage = "Select or drop a file",
+  placeholder,
   label,
-  isClearable = true,
-  accept = "image/*",
+  isClearable,
+  accept,
   onChange,
   style,
   className,
@@ -173,7 +173,7 @@ export const FileInput: React.FC<FileInputProps> = ({
             <div
               className={classNames(styles.empty, classNamePrefix + "--empty")}
             >
-              {emptyMessage}
+              {placeholder}
             </div>
           )}
         </label>
@@ -185,6 +185,8 @@ export const FileInput: React.FC<FileInputProps> = ({
 FileInput.defaultProps = {
   variant: InputVariant.medium,
   classNamePrefix: "file-input",
+  placeholder: "Select or drop a file",
+  isClearable: true,
 };
 
 export default FileInput;

@@ -44,6 +44,8 @@ export const TextInput: React.FC<TextInputProps> = ({
   ...rest
 }) => {
   const [focused, setFocused] = useState(false);
+  const [invalid, setInvalid] = useState(false);
+  const [validationMessage, setValidationMessage] = useState("");
   const [currentValue, setCurrentValue] = useState(
     initialValue ? initialValue : ""
   );
@@ -104,6 +106,7 @@ export const TextInput: React.FC<TextInputProps> = ({
           classNamePrefix + "--container",
           {
             [styles.focused]: focused,
+            [styles.invalid]: invalid,
           }
         )}
       >
@@ -121,6 +124,8 @@ export const TextInput: React.FC<TextInputProps> = ({
           className={classNames(styles.input, classNamePrefix + "--input")}
           onChange={(e) => {
             setCurrentValue(e.target.value);
+            setInvalid(!e.target.validity.valid);
+            setValidationMessage(e.target.validationMessage);
             if (onChange) onChange(e);
           }}
           onFocus={(e) => {
@@ -141,6 +146,14 @@ export const TextInput: React.FC<TextInputProps> = ({
             {...clearOptions}
           />
         )}
+      </div>
+      <div
+        className={classNames(
+          styles.validationMessage,
+          classNamePrefix + "--validation-message"
+        )}
+      >
+        {validationMessage && validationMessage.length > 0 && validationMessage}
       </div>
     </div>
   );
