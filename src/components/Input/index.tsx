@@ -1,4 +1,5 @@
-import * as Text from "./TextInput";
-import * as File from "./FileInput";
+import Text from "./TextInput";
+import File from "./FileInput";
 
-export default { ...Text, ...File };
+export const Input = { ...Text.Input, ...File };
+export const Formik = { ...Text.Formik };

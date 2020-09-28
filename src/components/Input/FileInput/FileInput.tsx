@@ -32,7 +32,7 @@ export interface FileInputProps extends React.HTMLProps<HTMLInputElement> {
   ) => void;
 }
 
-export const FileInput: React.FC<FileInputProps> = ({
+export const File: React.FC<FileInputProps> = ({
   variant,
   name,
   placeholder,
@@ -182,11 +182,11 @@ export const FileInput: React.FC<FileInputProps> = ({
   );
 };
 
-FileInput.defaultProps = {
+File.defaultProps = {
   variant: InputVariant.medium,
   classNamePrefix: "file-input",
   placeholder: "Select or drop a file",
   isClearable: true,
 };
 
-export default FileInput;
+export default File;

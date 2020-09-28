@@ -2,7 +2,7 @@ import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 
 import {
-  TextInput as TextInputComponent,
+  Text as TextInputComponent,
   TextInputProps,
   InputVariant,
 } from "./TextInput";

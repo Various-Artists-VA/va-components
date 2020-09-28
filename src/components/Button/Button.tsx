@@ -17,13 +17,13 @@ export enum ButtonVariant {
 
 export interface ButtonProps extends React.HTMLProps<HTMLDivElement> {
   children: ReactNode;
-  type?: ButtonType | string;
+  type: ButtonType | string;
   variant?: ButtonVariant | string;
   className?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
-  type = "primary",
+  type,
   variant = "medium",
   children,
   onClick,

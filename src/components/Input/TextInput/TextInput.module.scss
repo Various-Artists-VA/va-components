@@ -5,6 +5,10 @@
   flex-direction: column;
 }
 
+input:-webkit-clear-button {
+  display: none;
+}
+
 .label {
   &.large {
     font: $large-text;
@@ -37,6 +41,7 @@
 
   &.focused {
     border: solid 4px $grey;
+    background: $white;
   }
 
   &.focused.invalid {
@@ -120,7 +125,7 @@
   }
 }
 
-.validationMessage {
+.error {
   padding: 4px;
   font: $small-text;
   color: $red;

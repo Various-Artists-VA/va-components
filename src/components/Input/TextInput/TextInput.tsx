@@ -21,19 +21,23 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   label?: string;
   name?: string;
   icon?: string;
+  value?: string;
+  error?: string;
   style?: CSSProperties;
-  onChange?: (event: React.FormEvent<HTMLInputElement>) => void;
-  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
-  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onFocus?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const TextInput: React.FC<TextInputProps> = ({
+export const Text: React.FC<TextInputProps> = ({
   initialValue,
   placeholder,
   variant,
   icon,
   label,
   name,
+  value,
+  error,
   isClearable,
   onChange,
   onFocus,
@@ -44,11 +48,11 @@ export const TextInput: React.FC<TextInputProps> = ({
   ...rest
 }) => {
   const [focused, setFocused] = useState(false);
-  const [invalid, setInvalid] = useState(false);
-  const [validationMessage, setValidationMessage] = useState("");
   const [currentValue, setCurrentValue] = useState(
     initialValue ? initialValue : ""
   );
+
+  console.log(error);
 
   const clear = () => {
     setCurrentValue("");
@@ -106,7 +110,7 @@ export const TextInput: React.FC<TextInputProps> = ({
           classNamePrefix + "--container",
           {
             [styles.focused]: focused,
-            [styles.invalid]: invalid,
+            [styles.invalid]: error,
           }
         )}
       >
@@ -119,13 +123,11 @@ export const TextInput: React.FC<TextInputProps> = ({
         <input
           type="text"
           name={name}
-          value={currentValue}
+          value={value ?? currentValue}
           placeholder={placeholder}
           className={classNames(styles.input, classNamePrefix + "--input")}
           onChange={(e) => {
             setCurrentValue(e.target.value);
-            setInvalid(!e.target.validity.valid);
-            setValidationMessage(e.target.validationMessage);
             if (onChange) onChange(e);
           }}
           onFocus={(e) => {
@@ -149,19 +151,19 @@ export const TextInput: React.FC<TextInputProps> = ({
       </div>
       <div
         className={classNames(
-          styles.validationMessage,
+          styles.error,
           classNamePrefix + "--validation-message"
         )}
       >
-        {validationMessage && validationMessage.length > 0 && validationMessage}
+        {error && error.length > 0 && error}
       </div>
     </div>
   );
 };
 
-TextInput.defaultProps = {
+Text.defaultProps = {
   variant: InputVariant.medium,
   classNamePrefix: "text-input",
 };
 
-export default TextInput;
+export default Text;

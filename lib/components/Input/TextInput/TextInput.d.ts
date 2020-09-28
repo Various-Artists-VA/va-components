@@ -14,11 +14,13 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
     label?: string;
     name?: string;
     icon?: string;
+    value?: string;
+    error?: string;
     style?: CSSProperties;
-    onChange?: (event: React.FormEvent<HTMLInputElement>) => void;
-    onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
-    onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+    onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onFocus?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onBlur?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
-export declare const TextInput: React.FC<TextInputProps>;
-export default TextInput;
+export declare const Text: React.FC<TextInputProps>;
+export default Text;
 //# sourceMappingURL=TextInput.d.ts.map

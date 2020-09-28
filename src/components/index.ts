@@ -1,6 +1,6 @@
 import Button from "./Button";
 import BottomBar from "./BottomBar";
-import Input from "./Input";
+import { Input, Formik } from "./Input";
 import * as Typography from "./Text";
 
-export { Button, BottomBar, Input, Typography };
+export { Button, BottomBar, Input, Formik, Typography };

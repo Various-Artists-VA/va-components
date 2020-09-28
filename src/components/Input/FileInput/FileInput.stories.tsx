@@ -2,7 +2,7 @@ import React from "react";
 import { Meta } from "@storybook/react/types-6-0";
 
 import {
-  FileInput as FileInputComponent,
+  File as FileInputComponent,
   FileInputProps,
   InputVariant,
 } from "./FileInput";

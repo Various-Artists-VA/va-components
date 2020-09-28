@@ -23,6 +23,6 @@ export interface FileInputProps extends React.HTMLProps<HTMLInputElement> {
         };
     })) => void;
 }
-export declare const FileInput: React.FC<FileInputProps>;
-export default FileInput;
+export declare const File: React.FC<FileInputProps>;
+export default File;
 //# sourceMappingURL=FileInput.d.ts.map

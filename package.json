@@ -1,6 +1,6 @@
 {
   "name": "va-components",
-  "version": "1.0.23",
+  "version": "1.0.29",
   "description": "",
   "main": "dist/index.js",
   "types": "lib",
@@ -60,11 +60,13 @@
     "ts-loader": "^8.0.3",
     "typescript": "^4.0.2",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "yup": "^0.29.3"
   },
   "dependencies": {
     "@types/rc-slider": "^8.6.6",
     "classnames": "^2.2.6",
+    "formik": "^2.1.5",
     "node-sass": "^4.14.1",
     "rc-slider": "^9.2.4",
     "react-feather": "^2.0.8",
