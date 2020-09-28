@@ -1,6 +1,6 @@
 {
   "name": "va-components",
-  "version": "1.0.29",
+  "version": "1.0.31",
   "description": "",
   "main": "dist/index.js",
   "types": "lib",
@@ -32,7 +32,8 @@
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "formik": "^2.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.11.5",
@@ -66,8 +67,8 @@
   "dependencies": {
     "@types/rc-slider": "^8.6.6",
     "classnames": "^2.2.6",
-    "formik": "^2.1.5",
     "node-sass": "^4.14.1",
+    "formik": "^2.1.5",
     "rc-slider": "^9.2.4",
     "react-feather": "^2.0.8",
     "react-file-drop": "^3.0.7"
