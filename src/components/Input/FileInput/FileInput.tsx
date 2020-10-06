@@ -1,7 +1,6 @@
 import React, { useState, CSSProperties, SVGAttributes } from "react";
 import classNames from "classnames";
 
-import "./FileInput.scss";
 import styles from "./FileInput.module.scss";
 import { Clear } from "../../../assets";
 import { FileDrop, FileDropProps } from "react-file-drop";
@@ -144,19 +143,21 @@ export const File: React.FC<FileInputProps> = ({
             {...rest}
           />
           {currentValue.length > 0 ? (
-            <div className={styles.value}>
-              {currentValue.map((file: string) => (
-                <div
-                  key={file}
-                  className={classNames(
-                    styles.files,
-                    styles[variant],
-                    classNamePrefix + "--files"
-                  )}
-                >
-                  {file}
-                </div>
-              ))}
+            <>
+              <div className={styles.value}>
+                {currentValue.map((file: string) => (
+                  <div
+                    key={file}
+                    className={classNames(
+                      styles.files,
+                      styles[variant],
+                      classNamePrefix + "--files"
+                    )}
+                  >
+                    {file}
+                  </div>
+                ))}
+              </div>
               {isClearable && (
                 <Clear
                   className={classNames(
@@ -168,7 +169,7 @@ export const File: React.FC<FileInputProps> = ({
                   {...clearOptions}
                 />
               )}
-            </div>
+            </>
           ) : (
             <div
               className={classNames(styles.empty, classNamePrefix + "--empty")}

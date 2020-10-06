@@ -1,5 +1,4 @@
 import React, { CSSProperties } from "react";
-import "./FileInput.scss";
 import { FileDropProps } from "react-file-drop";
 export declare enum InputVariant {
     large = "large",
