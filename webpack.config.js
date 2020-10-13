@@ -17,6 +17,7 @@ module.exports = {
   externals: {
     react: "umd react",
     "react-dom": "umd react-dom",
+    formik: "umd formik",
   },
   module: {
     rules: [
