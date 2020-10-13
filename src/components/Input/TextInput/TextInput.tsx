@@ -13,7 +13,7 @@ export enum InputVariant {
 
 export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   variant: InputVariant;
-  initialValue?: string;
+  initialValue?: string | number;
   placeholder?: string;
   classNamePrefix?: string;
   className?: string;
@@ -21,7 +21,7 @@ export interface TextInputProps extends React.HTMLProps<HTMLInputElement> {
   label?: string;
   name?: string;
   icon?: string;
-  value?: string;
+  value?: string | number;
   error?: string;
   style?: CSSProperties;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
